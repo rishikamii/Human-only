@@ -139,7 +139,64 @@
             font-weight: bold;
             text-transform: uppercase;
         }
-    </style>
+   /* =========================================
+       5. SUBMISSION FORM
+       ========================================= */
+    .submit-box {
+        background: #000000;
+        color: #ffffff;
+        border: 3px solid #000000;
+        padding: 25px;
+        margin-bottom: 40px;
+    }
+
+    .submit-box h2 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        color: #ccff00; /* Neon yellow title */
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 2px solid #ffffff;
+        background: #000000;
+        color: #ffffff;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        border-color: #ccff00; /* Turns neon when clicked */
+    }
+
+    button {
+        background: #ccff00;
+        color: #000000;
+        border: 2px solid #ffffff;
+        padding: 12px 24px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: transform 0.1s ease;
+    }
+
+    button:hover {
+        transform: translate(-4px, -4px);
+        box-shadow: 4px 4px 0px #ffffff;
+    } </style>
 </head>
 <body>
 

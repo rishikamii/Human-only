@@ -13,15 +13,15 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Courier New', Courier, monospace; /* Typewriter aesthetic */
+            font-family: 'Courier New', Courier, monospace; 
         }
 
         body {
-            background-color: #f4f4f0; /* Off-white paper background */
+            background-color: #f4f4f0; 
             color: #000000;
             padding: 20px;
-            max-width: 900px; /* Keeps the site from stretching too wide on big screens */
-            margin: 0 auto;   /* Centers the website horizontally */
+            max-width: 900px; 
+            margin: 0 auto;   
             line-height: 1.5;
         }
 
@@ -60,11 +60,70 @@
         }
 
         /* =========================================
-           3. DIRECTORY GRID & CARDS
+           3. SUBMISSION FORM STYLES
+           ========================================= */
+        .submit-box {
+            background: #000000;
+            color: #ffffff;
+            border: 3px solid #000000;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+        .submit-box h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: #ccff00; 
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ffffff;
+            background: #000000;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ccff00; 
+        }
+
+        button {
+            background: #ccff00;
+            color: #000000;
+            border: 2px solid #ffffff;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+
+        button:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0px #ffffff;
+        }
+
+        /* =========================================
+           4. DIRECTORY GRID & CARDS
            ========================================= */
         .directory-grid {
             display: grid;
-            grid-template-columns: 1fr; /* Single column layout */
+            grid-template-columns: 1fr; 
             gap: 20px; 
             margin-bottom: 40px;
         }
@@ -74,16 +133,14 @@
             border: 3px solid #000000;
             padding: 25px;
             position: relative;
-            transition: all 0.1s ease; /* Makes the hover snap instantly */
+            transition: all 0.1s ease; 
         }
 
-        /* Tactile Hover Effect */
         .card:hover {
             transform: translate(-5px, -5px); 
-            box-shadow: 5px 5px 0px #000000; /* Hard shadow offset */
+            box-shadow: 5px 5px 0px #000000; 
         }
 
-        /* The Neon Verification Badge */
         .badge {
             position: absolute;
             top: 20px;
@@ -93,10 +150,9 @@
             font-size: 0.8rem;
             font-weight: bold;
             text-transform: uppercase;
-            background: #ccff00; /* High contrast neon green/yellow */
+            background: #ccff00; 
         }
 
-        /* Link Styling */
         .card-title {
             font-size: 1.5rem;
             font-weight: bold;
@@ -104,7 +160,7 @@
             text-decoration: none; 
             display: inline-block;
             margin-bottom: 10px;
-            padding-right: 120px; /* Keeps text from hitting the badge */
+            padding-right: 120px; 
         }
 
         .card-title:hover {
@@ -129,7 +185,7 @@
         }
 
         /* =========================================
-           4. FOOTER
+           5. FOOTER
            ========================================= */
         footer {
             text-align: center;
@@ -139,64 +195,7 @@
             font-weight: bold;
             text-transform: uppercase;
         }
-   /* =========================================
-       5. SUBMISSION FORM
-       ========================================= */
-    .submit-box {
-        background: #000000;
-        color: #ffffff;
-        border: 3px solid #000000;
-        padding: 25px;
-        margin-bottom: 40px;
-    }
-
-    .submit-box h2 {
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        color: #ccff00; /* Neon yellow title */
-    }
-
-    label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        font-size: 0.85rem;
-    }
-
-    input, textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 20px;
-        border: 2px solid #ffffff;
-        background: #000000;
-        color: #ffffff;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 1rem;
-    }
-
-    input:focus, textarea:focus {
-        outline: none;
-        border-color: #ccff00; /* Turns neon when clicked */
-    }
-
-    button {
-        background: #ccff00;
-        color: #000000;
-        border: 2px solid #ffffff;
-        padding: 12px 24px;
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: transform 0.1s ease;
-    }
-
-    button:hover {
-        transform: translate(-4px, -4px);
-        box-shadow: 4px 4px 0px #ffffff;
-    } </style>
+    </style>
 </head>
 <body>
 
@@ -206,10 +205,11 @@
         <p class="header-desc">A zero-bot directory mapping raw, verified, un-automated human creations from the depths of the clearnet.</p>
     </header>
 
-    <main class="directory-grid">
+    <main>
+
         <div class="submit-box">
             <h2>+ Submit a Creation</h2>
-            <form action="YOUR_ENDPOINT_HERE" method="POST">
+            <form action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST">
                 
                 <label>Creator / Username</label>
                 <input type="text" name="username" placeholder="Who made this?" required>
@@ -224,28 +224,30 @@
                 
             </form>
         </div>
-        <!-- DIRECTORY ITEM 1 -->
-        <div class="card">
-            <span class="badge">Verified Human</span>
-            <a href="https://github.com" target="_blank" class="card-title">Project_01: ASCII Engine</a>
-            <p class="card-desc">A lightweight 3D rendering engine built entirely using keyboard characters and pure math. No pre-made visual asset libraries were used.</p>
-            <div class="meta">Category: Code // Date Added: 2026-06-12</div>
-        </div>
 
-        <!-- DIRECTORY ITEM 2 -->
-        <div class="card">
-            <span class="badge">Verified Human</span>
-            <a href="https://reddit.com" target="_blank" class="card-title">Journal_Entry_04.txt</a>
-            <p class="card-desc">Raw scans of physical, handwritten brainstorming notebooks detailing an indie-dev workflow. Non-manicured thoughts and messy execution.</p>
-            <div class="meta">Category: Logs // Date Added: 2026-06-10</div>
-        </div>
+        <div class="directory-grid">
+            
+            <div class="card">
+                <span class="badge">Verified Human</span>
+                <a href="https://github.com" target="_blank" class="card-title">Project_01: ASCII Engine</a>
+                <p class="card-desc">A lightweight 3D rendering engine built entirely using keyboard characters and pure math. No pre-made visual asset libraries were used.</p>
+                <div class="meta">Category: Code // Date Added: 2026-06-12</div>
+            </div>
 
-        <!-- DIRECTORY ITEM 3 -->
-        <div class="card">
-            <span class="badge">Verified Human</span>
-            <a href="https://soundcloud.com" target="_blank" class="card-title">Raw_Audio_Transit_Loop</a>
-            <p class="card-desc">Unedited, ambient audio recording documenting soundscapes along industrial transit loops. Zero master processing or AI cleanup applied.</p>
-            <div class="meta">Category: Audio // Date Added: 2026-06-08</div>
+            <div class="card">
+                <span class="badge">Verified Human</span>
+                <a href="https://reddit.com" target="_blank" class="card-title">Journal_Entry_04.txt</a>
+                <p class="card-desc">Raw scans of physical, handwritten brainstorming notebooks detailing an indie-dev workflow. Non-manicured thoughts and messy execution.</p>
+                <div class="meta">Category: Logs // Date Added: 2026-06-10</div>
+            </div>
+
+            <div class="card">
+                <span class="badge">Verified Human</span>
+                <a href="https://soundcloud.com" target="_blank" class="card-title">Raw_Audio_Transit_Loop</a>
+                <p class="card-desc">Unedited, ambient audio recording documenting soundscapes along industrial transit loops. Zero master processing or AI cleanup applied.</p>
+                <div class="meta">Category: Audio // Date Added: 2026-06-08</div>
+            </div>
+
         </div>
 
     </main>

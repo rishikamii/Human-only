@@ -15,15 +15,15 @@
         }
 
         body {
-            background-color: #f0f0f0; /* Light gray background */
-            color: #000000;            /* Sharp black text */
+            background-color: #f0f0f0;
+            color: #000000;
             padding: 20px;
         }
 
         /* 2. THE HEADER BLOCK */
         header {
-            border: 3px solid #000000; /* Thick, stark black border */
-            background: #ffffff;       /* Pure white background box */
+            border: 3px solid #000000;
+            background: #ffffff;
             padding: 30px;
             margin-bottom: 20px;
         }
@@ -32,6 +32,46 @@
             font-size: 2.5rem;
             text-transform: uppercase;
             margin-bottom: 10px;
+        }
+
+        /* 3. THE DIRECTORY GRID & CARDS (NEW) */
+        .directory-grid {
+            display: grid;
+            gap: 15px; 
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 3px solid #000000;
+            padding: 20px;
+            transition: transform 0.1s ease; 
+        }
+
+        /* The hover state makes it move when the mouse touches it */
+        .card:hover {
+            transform: translate(-4px, -4px); 
+            box-shadow: 4px 4px 0px #000000;  
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #000000;
+            text-decoration: none; 
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .card-title:hover {
+            text-decoration: underline;
+        }
+
+        .meta {
+            font-size: 0.8rem;
+            color: #666666;
+            margin-top: 10px;
+            text-transform: uppercase;
         }
     </style>
 
@@ -44,8 +84,23 @@
         <p>A zero-bot directory mapping raw, verified human creations.</p>
     </header>
 
-    <main>
-        <!-- This is where our list will go later -->
+    <!-- NEW MAIN CONTENT BLOCK -->
+    <main class="directory-grid">
+        
+        <!-- CARD 1 -->
+        <div class="card">
+            <a href="https://github.com" target="_blank" class="card-title">Project_01: Raw Code</a>
+            <p>A lightweight engine built entirely without pre-made libraries.</p>
+            <div class="meta">Category: Code // Status: Verified</div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <a href="https://reddit.com" target="_blank" class="card-title">Journal_Entry_04.txt</a>
+            <p>Scans of physical, handwritten notebooks detailing a workflow.</p>
+            <div class="meta">Category: Logs // Status: Verified</div>
+        </div>
+
     </main>
 
     <footer>

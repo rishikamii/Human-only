@@ -207,20 +207,23 @@
     </header>
 
     <main class="directory-grid">
-        + Submit a Creation
-        
-            
-            Creator / Username
-            
-            
-            Link to Project
-            
-            
-            Why does this belong here?
-            
-            
-            Send to Curator
-        
+        <div class="submit-box">
+            <h2>+ Submit a Creation</h2>
+            <form action="YOUR_ENDPOINT_HERE" method="POST">
+                
+                <label>Creator / Username</label>
+                <input type="text" name="username" placeholder="Who made this?" required>
+                
+                <label>Link to Project</label>
+                <input type="url" name="project_link" placeholder="YouTube, Drive, Itch.io link..." required>
+                
+                <label>Why does this belong here?</label>
+                <textarea name="description" rows="3" placeholder="Tell the human story behind it..." required></textarea>
+                
+                <button type="submit">Send to Curator</button>
+                
+            </form>
+        </div>
         <!-- DIRECTORY ITEM 1 -->
         <div class="card">
             <span class="badge">Verified Human</span>

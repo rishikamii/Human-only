@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HUMAN_ONLY // The Provenance Index</title>
+    <title>HUMAN_ONLY // curated by rishi</title>
 
     <style>
         /* =========================================
@@ -51,7 +51,7 @@
             font-weight: bold;
             font-size: 1rem;
             margin-bottom: 15px;
-            text-transform: uppercase;
+            text-transform: lowercase;
         }
 
         .header-desc {
@@ -72,7 +72,7 @@
 
         .submit-box h2 {
             font-size: 1.5rem;
-            text-transform: uppercase;
+            text-transform: lowercase;
             margin-bottom: 15px;
             color: #ccff00; 
         }
@@ -81,7 +81,7 @@
             display: block;
             font-weight: bold;
             margin-bottom: 5px;
-            text-transform: uppercase;
+            text-transform: lowercase;
             font-size: 0.85rem;
         }
 
@@ -108,7 +108,7 @@
             padding: 12px 24px;
             font-size: 1rem;
             font-weight: bold;
-            text-transform: uppercase;
+            text-transform: lowercase;
             cursor: pointer;
             transition: transform 0.1s ease;
         }
@@ -149,7 +149,7 @@
             padding: 4px 8px;
             font-size: 0.8rem;
             font-weight: bold;
-            text-transform: uppercase;
+            text-transform: lowercase;
             background: #ccff00; 
         }
 
@@ -178,7 +178,7 @@
         .meta {
             font-size: 0.85rem;
             color: #555555;
-            text-transform: uppercase;
+            text-transform: lowercase;
             border-top: 1px dashed #000000;
             padding-top: 10px;
             font-weight: bold;
@@ -193,7 +193,7 @@
             padding: 20px;
             border-top: 3px solid #000000;
             font-weight: bold;
-            text-transform: uppercase;
+            text-transform: lowercase;
         }
     </style>
 </head>
@@ -201,51 +201,68 @@
 
     <header>
         <h1>HUMAN_ONLY</h1>
-        <div class="tagline">The Provenance Index v1.0</div>
-        <p class="header-desc">A zero-bot directory mapping raw, verified, un-automated human creations from the depths of the clearnet.</p>
+        <div class="tagline">curated by rishi // v1.1</div>
+        <p class="header-desc">i got tired of the ai-generated sludge on my feed. so i built this. a manual directory of cool art, code, and ideas made by actual humans. no algorithms.</p>
     </header>
 
     <main>
 
+        <!-- =======================================
+             SUBMISSION PORTAL
+             ======================================= -->
         <div class="submit-box">
-            <h2>+ Submit a Creation</h2>
+            <h2>+ drop a link</h2>
             <form action="https://formspree.io/f/xojzkork" method="POST">
                 
-                <label>Creator / Username</label>
-                <input type="text" name="username" placeholder="Who made this?" required>
+                <label>who are you?</label>
+                <input type="text" name="username" placeholder="name or handle" required>
                 
-                <label>Link to Project</label>
-                <input type="url" name="project_link" placeholder="YouTube, Drive, Itch.io link..." required>
+                <label>where's the project?</label>
+                <input type="url" name="project_link" placeholder="youtube, itch.io, linktree..." required>
                 
-                <label>Why does this belong here?</label>
-                <textarea name="description" rows="3" placeholder="Tell the human story behind it..." required></textarea>
+                <label>what is this and why should i care?</label>
+                <textarea name="description" rows="3" placeholder="tell me the story behind it." required></textarea>
                 
-                <button type="submit">Send to Curator</button>
+                <button type="submit">send to rishi</button>
                 
             </form>
         </div>
 
+        <!-- =======================================
+             THE LIVE FEED (CARDS)
+             ======================================= -->
         <div class="directory-grid">
             
+            <!-- DIRECTORY ITEM 4: SPATZDIDI -->
             <div class="card">
-                <span class="badge">Verified Human</span>
-                <a href="https://github.com" target="_blank" class="card-title">Project_01: ASCII Engine</a>
-                <p class="card-desc">A lightweight 3D rendering engine built entirely using keyboard characters and pure math. No pre-made visual asset libraries were used.</p>
-                <div class="meta">Category: Code // Date Added: 2026-06-12</div>
+                <span class="badge">verified human</span>
+                <a href="https://linktr.ee/spatzdidi" target="_blank" class="card-title">Spatzdidi // Portfolio</a>
+                <p class="card-desc">digital artist and designer. the very first actual human to submit to the index.</p>
+                <div class="meta">category: art/design // added: 2026-06-13</div>
             </div>
 
+            <!-- DIRECTORY ITEM 1 -->
             <div class="card">
-                <span class="badge">Verified Human</span>
-                <a href="https://reddit.com" target="_blank" class="card-title">Journal_Entry_04.txt</a>
-                <p class="card-desc">Raw scans of physical, handwritten brainstorming notebooks detailing an indie-dev workflow. Non-manicured thoughts and messy execution.</p>
-                <div class="meta">Category: Logs // Date Added: 2026-06-10</div>
+                <span class="badge">verified human</span>
+                <a href="https://github.com" target="_blank" class="card-title">ASCII Rendering Engine</a>
+                <p class="card-desc">a 3d engine built in the terminal using keyboard characters. pure math, no pre-made visual assets.</p>
+                <div class="meta">category: code // added: 2026-06-12</div>
             </div>
 
+            <!-- DIRECTORY ITEM 2 -->
             <div class="card">
-                <span class="badge">Verified Human</span>
-                <a href="https://soundcloud.com" target="_blank" class="card-title">Raw_Audio_Transit_Loop</a>
-                <p class="card-desc">Unedited, ambient audio recording documenting soundscapes along industrial transit loops. Zero master processing or AI cleanup applied.</p>
-                <div class="meta">Category: Audio // Date Added: 2026-06-08</div>
+                <span class="badge">verified human</span>
+                <a href="https://reddit.com" target="_blank" class="card-title">Indie Dev Notebooks</a>
+                <p class="card-desc">some indie dev's messy, handwritten notebook scans. just raw brainstorming, nothing polished.</p>
+                <div class="meta">category: logs // added: 2026-06-10</div>
+            </div>
+
+            <!-- DIRECTORY ITEM 3 -->
+            <div class="card">
+                <span class="badge">verified human</span>
+                <a href="https://soundcloud.com" target="_blank" class="card-title">Transit Loop Audio</a>
+                <p class="card-desc">raw audio recorded on an industrial transit loop. zero master processing, just actual city noise.</p>
+                <div class="meta">category: audio // added: 2026-06-08</div>
             </div>
 
         </div>
@@ -253,7 +270,7 @@
     </main>
 
     <footer>
-        <p>System Status: Online // No Bots Allowed // Hosted via GitHub</p>
+        <p>maintained by rishi // built on github // no bots allowed</p>
     </footer>
 
 </body>
